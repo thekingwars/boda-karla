@@ -33,15 +33,15 @@ export function InvitationCover({ onOpen }: { onOpen: () => void }) {
     <div className="cover-intro"><p className="eyebrow">Con todo nuestro amor</p><h1>Estás invitado a<br/><em>nuestro para siempre.</em></h1></div>
     <div className="envelope">
       <div className="envelope-back"/>
-      <div className="envelope-letter"><span className="script">Karla & Andrés</span><span className="eyebrow">20 · 03 · 2027</span></div>
+      <div className="envelope-letter"><span className="script">Karla & María</span><span className="eyebrow">20 · 03 · 2027</span></div>
       <div className="envelope-front"><Botanical className="envelope-botanical"/></div>
       <div className="envelope-flap"/>
-      <button className="seal" type="button" aria-label="Abrir invitación de Karla y Andrés" onClick={() => contextSafe(open)()} disabled={opening}>
-        <span className="seal-halo"/><span className="seal-edge"/><span className="seal-monogram">K<span>&</span>A</span>
+      <button className="seal" type="button" aria-label="Abrir invitación de Karla y María" onClick={() => contextSafe(open)()} disabled={opening}>
+        <span className="seal-halo"/><span className="seal-edge"/><span className="seal-monogram">K<span>&</span>M</span>
       </button>
       <span className="envelope-caption">PARA TI, CON CARIÑO</span>
     </div>
-    <div className="cover-bottom"><span className="fine-line"/><p>{opening ? 'Comienza nuestra historia…' : 'Toca el sello para abrir'}</p><span className="cover-date">KARLA & ANDRÉS · 20 MARZO 2027</span></div>
+    <div className="cover-bottom"><span className="fine-line"/><p>{opening ? 'Comienza nuestra historia…' : 'Toca el sello para abrir'}</p><span className="cover-date">KARLA & MARÍA · 20 MARZO 2027</span></div>
     <Botanical className="cover-leaves left"/><Botanical className="cover-leaves right"/>
   </section>
 }

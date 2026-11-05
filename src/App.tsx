@@ -80,7 +80,7 @@ function App() {
     <main ref={main} id="invitacion" tabIndex={-1} inert={!opened} className="paper">
       <div className="reading-progress" aria-hidden="true"/>
       <header className="site-header">
-        <a href="#inicio" className="monogram" aria-label="Karla y Andrés, inicio">K<span>&</span>A</a>
+        <a href="#inicio" className="monogram" aria-label="Karla y María, inicio">K<span>&</span>M</a>
         <nav aria-label="Navegación principal"><a href="#historia">Nuestra historia</a><a href="#celebracion">El gran día</a><a href="#detalles">Los detalles</a></nav>
         <button className="header-rsvp" onClick={() => setRsvpOpen(true)}>Confirmar asistencia <Icon name="arrow"/></button>
       </header>
@@ -88,7 +88,7 @@ function App() {
       <section className="hero-section section-shell" id="inicio" aria-labelledby="couple-names">
         <div className="hero-copy">
           <p className="eyebrow"><span className="tiny-star">✧</span> ¡Nos casamos!</p>
-          <h1 id="couple-names"><span className="hero-name">Karla</span><span className="hero-name second-name"><span className="ampersand">&</span> Andrés</span></h1>
+          <h1 id="couple-names"><span className="hero-name">Karla</span><span className="hero-name second-name"><span className="ampersand">&</span> María</span></h1>
           <p className="hero-description">Hay encuentros que lo cambian todo.<br/>Y personas con las que el «para siempre»<br/>se siente como el lugar al que volver.</p>
           <div className="hero-date"><span>SÁBADO</span><strong>20 <i>/</i> 03 <i>/</i> 27</strong><span>CARACAS, VENEZUELA</span></div>
           <a href="#celebracion" className="text-link">Acompáñanos a celebrar <Icon name="arrow"/></a>
@@ -105,7 +105,7 @@ function App() {
 
       <section className="story section-shell" id="historia" aria-labelledby="story-title">
         <div className="story-photos" data-reveal><div className="photo-frame"><img className="parallax-photo" src="/images/couple.jpg" alt="Una pareja celebrando su boda al aire libre" loading="lazy" width="1000" height="1300" onLoad={() => ScrollTrigger.refresh()}/><span className="photo-caption script">Mi lugar favorito eres tú.</span></div><span className="photo-index eyebrow">DOS PERSONAS · UNA MISMA DIRECCIÓN</span></div>
-        <div className="story-copy"><p className="eyebrow" data-reveal>01 / Nuestra historia</p><h2 id="story-title" data-reveal>De todas las<br/>casualidades,<br/><em>tú eres la más bonita.</em></h2><p data-reveal>Lo que comenzó con una conversación se convirtió en nuestro lugar favorito. Entre viajes, domingos sin prisa y mil pequeños momentos, descubrimos que la vida sabe mejor juntos.</p><p data-reveal>Hoy queremos escribir el siguiente capítulo rodeados de las personas que forman parte de nuestra historia. Y tú estás en ella.</p><span className="story-signature script" data-reveal>Karla & Andrés</span></div>
+        <div className="story-copy"><p className="eyebrow" data-reveal>01 / Nuestra historia</p><h2 id="story-title" data-reveal>De todas las<br/>casualidades,<br/><em>tú eres la más bonita.</em></h2><p data-reveal>Lo que comenzó con una conversación se convirtió en nuestro lugar favorito. Entre viajes, domingos sin prisa y mil pequeños momentos, descubrimos que la vida sabe mejor juntos.</p><p data-reveal>Hoy queremos escribir el siguiente capítulo rodeados de las personas que forman parte de nuestra historia. Y tú estás en ella.</p><span className="story-signature script" data-reveal>Karla & María</span></div>
         <Botanical className="story-botanical"/>
       </section>
 
@@ -137,9 +137,9 @@ function App() {
 
       <section className="rsvp-section" id="confirmacion" aria-labelledby="rsvp-heading">
         <Botanical className="rsvp-botanical left"/><Botanical className="rsvp-botanical right"/>
-        <div className="rsvp-content"><p className="eyebrow" data-reveal>Nos falta lo más importante: tú</p><h2 id="rsvp-heading" data-reveal>Esta historia es más bonita<br/><em>si la celebramos contigo.</em></h2><p data-reveal>Guárdanos un abrazo y un baile.<br/>Confirma tu asistencia antes del 1 de marzo.</p><button className="button dark" onClick={() => setRsvpOpen(true)} data-reveal>Sí, quiero acompañarlos <Icon name="arrow"/></button><span className="rsvp-signature script" data-reveal>Con amor, K & A</span></div>
+        <div className="rsvp-content"><p className="eyebrow" data-reveal>Nos falta lo más importante: tú</p><h2 id="rsvp-heading" data-reveal>Esta historia es más bonita<br/><em>si la celebramos contigo.</em></h2><p data-reveal>Guárdanos un abrazo y un baile.<br/>Confirma tu asistencia antes del 1 de marzo.</p><button className="button dark" onClick={() => setRsvpOpen(true)} data-reveal>Sí, quiero acompañarlas <Icon name="arrow"/></button><span className="rsvp-signature script" data-reveal>Con amor, K & M</span></div>
       </section>
-      <footer className="site-footer"><a href="#inicio" className="monogram" aria-label="Volver al inicio">K<span>&</span>A</a><p>20 MARZO 2027 <span>·</span> EL COMIENZO DE NUESTRO SIEMPRE</p><span className="demo-footer">Invitación de muestra · Nombres, lugares y fecha ilustrativos</span><span className="photo-credit">Fotografías de <a href="https://unsplash.com" target="_blank" rel="noreferrer">Unsplash</a></span></footer>
+      <footer className="site-footer"><a href="#inicio" className="monogram" aria-label="Volver al inicio">K<span>&</span>M</a><p>20 MARZO 2027 <span>·</span> EL COMIENZO DE NUESTRO SIEMPRE</p><span className="demo-footer">Invitación de muestra · Nombres, lugares y fecha ilustrativos</span><span className="photo-credit">Fotografías de <a href="https://unsplash.com" target="_blank" rel="noreferrer">Unsplash</a></span></footer>
       <button className="motion-toggle" type="button" aria-pressed={!animations} aria-label={animations ? 'Pausar animaciones decorativas' : 'Activar animaciones decorativas'} title={animations ? 'Pausar animaciones' : 'Activar animaciones'} onClick={() => setAnimations(v => !v)}>{animations ? <span aria-hidden="true">Ⅱ</span> : <span aria-hidden="true">▷</span>}</button>
     </main>
     {rsvpOpen && <RsvpDialog onClose={() => setRsvpOpen(false)}/>}

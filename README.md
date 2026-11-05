@@ -1,4 +1,4 @@
-# Karla & Andrés — Wedding Invitation Demo
+# Karla & María — Wedding Invitation Demo
 
 A responsive wedding invitation built with React, TypeScript, Vite, GSAP, and @gsap/react.
 
