@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import type { FormEvent } from 'react'
+import type { SubmitEvent } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { Icon } from './Illustrations'
@@ -23,7 +23,7 @@ export function RsvpDialog({ onClose }: { onClose: () => void }) {
       gsap.from(dialog.current, { y: 25, opacity: 0, duration: .5, ease: 'power2.out' })
     }
   }, { scope: dialog })
-  function submit(event: FormEvent<HTMLFormElement>) {
+  function submit(event: SubmitEvent<HTMLFormElement>) {
     event.preventDefault()
     const data = new FormData(event.currentTarget)
     const name = String(data.get('name') ?? '').trim()
